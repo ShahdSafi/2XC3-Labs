@@ -1,0 +1,14 @@
+# 1. Average word length in one Spanish document.
+cat ~/sfwreng-2xc3-bash-assignment-shahdsafi/2XC3-data/gutenberg/spanish/novelas_cortas.txt | ~/week03/splt | wc | ~/week03/wstat
+
+# 2. Average word length across all Spanish documents.
+cat ~/sfwreng-2xc3-bash-assignment-shahdsafi/2XC3-data/gutenberg/spanish/* | ~/week03/splt | wc | ~/week03/wstat
+
+# 3. Average word length of the first 100 words.
+cat ~/sfwreng-2xc3-bash-assignment-shahdsafi/2XC3-data/gutenberg/spanish/* | ~/week03/splt | head -n 100 | wc | ~/week03/wstat
+
+# 4. Average word length of the last 100 words.
+cat ~/sfwreng-2xc3-bash-assignment-shahdsafi/2XC3-data/gutenberg/spanish/* | ~/week03/splt | tail -n 100 | wc | ~/week03/wstat
+
+# 5. Average word length of all unique Spanish words.
+cat ~/sfwreng-2xc3-bash-assignment-shahdsafi/2XC3-data/gutenberg/spanish/* | ~/week03/splt | sort -u | wc | ~/week03/wstat

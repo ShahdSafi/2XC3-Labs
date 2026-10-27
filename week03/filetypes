@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]; then
+    echo "Usage: $0 file_or_directory ..." >&2
+    exit 1
+fi
+
+for item in "$@"; do
+    if [ -d "$item" ]; then
+        echo "directory: $item"
+    elif [ -f "$item" ]; then
+        echo "file: $item"
+    else
+        echo "unknown: $item"
+    fi
+done

@@ -1,0 +1,17 @@
+# 1. Print all unique words from the English Gutenberg files, one word per line.
+cat ~/sfwreng-2xc3-bash-assignment-shahdsafi/2XC3-data/gutenberg/english/* | ~/week03/splt | sort -u
+
+# 2. Count the unique words.
+cat ~/sfwreng-2xc3-bash-assignment-shahdsafi/2XC3-data/gutenberg/english/* | ~/week03/splt | sort -u | wc -l
+
+# 3. Save the unique words to lexicon.txt.
+cat ~/sfwreng-2xc3-bash-assignment-shahdsafi/2XC3-data/gutenberg/english/* | ~/week03/splt | sort -u > ~/week03/lexicon.txt
+
+# 4. Display the first word.
+head -n 1 ~/week03/lexicon.txt
+
+# 5. Display the last word.
+tail -n 1 ~/week03/lexicon.txt
+
+# 6. Display the 9998th word.
+sed -n '9998p' ~/week03/lexicon.txt
