@@ -1,0 +1,110 @@
+Lab 4.1 - Bash and RegEx
+
+Question 1
+
+1. Regex: ^re*ge+x
+Matching:
+rgex
+reegex
+reegeex
+Not matching:
+rex
+rge
+regx
+
+2. Regex: [^regex]
+Matching:
+a
+1
+_
+Not matching:
+r
+e
+x
+
+3. Regex: (reg){0,2}ex
+Matching:
+ex
+regex
+regregex
+Not matching:
+re
+reg
+regx
+
+4. Regex: re?g?e?x
+Matching:
+rx
+rex
+rgx
+Not matching:
+x
+reg
+reex
+
+5. Regex: ^(reg|REG)(ex)\2\1$
+Matching:
+regexexreg
+REGexexREG
+regexexreg
+Not matching:
+regex
+REGexreg
+regexregex
+
+Question 2
+
+1. Regex: a(ab)*a
+Matching:
+aaba
+aabababa
+
+2. Regex: ab+c
+Matching:
+abc
+
+3. Regex: a.[bc]+
+Matching:
+abc
+abbbbbbbb
+azc
+abcbcbcbc
+asccbbbbcbcccc
+
+4. Regex: abc|xyz
+Matching:
+abc
+xyz
+abc|xyz
+
+5. Regex: [a-z]+[\.\?!]
+Matching:
+Battle!
+swamping.
+jump up.
+undulate?
+is.?
+
+6. Regex: [a-zA-Z]*[^,]=
+Matching:
+Putt=
+FIdDlE7h=
+Brittle =
+Other.=
+
+7. Regex: [a-z][\.\?!]\s+[A-Z]
+Matching:
+g. H
+i? J
+
+8. Regex: <[^>]+>
+Matching:
+<an xml tag>
+<opentag>
+<closetag>
+</closetag>
+<with attribute="77">
+
+9. Regex: (very )+(important )?(tall|well-dressed) person
+Matching:
+very very well-dressed person
